@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <meta charset="UTF-8"> 
+    <link rel="stylesheet" type="text/css" href="codigo.css">
+    <script type="text/javascript" src="codigo.js" defer></script>
+    <title>Programdor fullstack</title>
+  </head>
+
+  <body>
+
+    <div class="caja"> <!--aqui dentro va ir la calculadora-->
+      
+      <div class="calculadora"> <!--creamos la calculadora a traves de un div-->
+        
+        <div class="display"> <!--creamos el display de la calculadora-->
+          <div id="valor-anterior"></div> <!--primer valor ingresado-->
+          <div id="valor-actual"></div> <!--segundo valor ingresado-->
+        </div>
+
+        <!--Defino los botones a utilizar-->
+        <button class="boton" onclick="display.borrarTodo()">C</button> <!--opcion para resetar los caracteres-->
+        <button onclick="display.borrar()">&larr;</button> <!--elimina los caracteres de uno en uno-->
+
+        <button class="operador" value="dividir">%</button>
+
+        <button class="numero">7</button>
+        <button class="numero">8</button>
+        <button class="numero">9</button>
+
+        <button class="operador" value="multiplicar">X</button>
+
+        <button class="numero">4</button>
+        <button class="numero">5</button>
+        <button class="numero">6</button>
+
+        <button class="operador" value="restar">-</button>
+        <button class="numero">1</button>
+        <button class="numero">2</button>
+        <button class="numero">3</button>
+
+        <button class="operador" value="sumar">+</button>
+
+        <button class="numero">0</button>
+        <button class="numero">.</button>
+
+        <button class="boton operador" value="igual">=</button>
+      </div>
+
+      <div id="historial"><!--historial de operaciones realizadas-->
+        <h3>
+          <u>
+            <center>Historial</center>
+          </u>
+        </h3>
+      </div>
+
+    </div>
+
+  </body>
+</html>
+
+

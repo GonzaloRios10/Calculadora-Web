@@ -1,0 +1,62 @@
+body {
+	background: rgb(93, 173, 226 ); /*color de fondo de la pagina*/
+}
+
+.caja {
+	display: flex; /*utilizamos la opcion grid para que la capacidad de la caja sea flexible para alterar sus dimensiones y llenar el espacio disponible*/
+	justify-content: center; /*colocamos la caja en el centro de la pagina*/
+	align-items: center; /**/
+	height: 100vh; /*altura que le asignamos a la caja de la calculadora*/
+}
+
+.calculadora {
+	display: grid; /*utilizamos la opcion grid para asi determinar las columnas y su tamaño*/
+	grid-template-columns: repeat(4, 75px); /* se crean 4 columnas con un tamaño ancho de 75px */
+	grid-template-rows: 100px repeat(5, 75px); /* alto total del display*/
+	background: black; /*color de la calculadora*/
+	padding: 15px; /*asignamos un espacio entre el contenido y los bordes de la caja.*/
+	border-radius: 30px; /*borde redondeado de la calculadora*/
+}
+
+button {
+	cursor: pointer;
+	margin: 5px; /*asignamos un espacio entre los botones*/
+	border-radius: 30px; /*borde redondeados de los botones*/
+	font-size: 1.5rem; /*tamaño de fuente*/
+	border: solid; /*tipo de borde de los botones*/
+}
+
+button:hover {
+	background: white; /*color al apoyar el mouse a los botones*/
+}
+
+.boton{
+	grid-column: span 2; /*permite darle una ancho a los botones C e = */
+}
+
+.display {
+    grid-column: 1 / -1;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: white;
+    border-radius: 30px; /*borde redondeado del display*/
+    justify-content: space-between; 
+}
+
+#valor-actual {
+    font-size: 1.5em; /*tamaño de fuente del primer valor ingresado*/
+}
+
+#valor-anterior {
+    font-size: 2em; /*tamaño de fuente del valor anteriormente ingresado*/
+}
+
+#historial{
+	background: white;
+	padding: 50px;
+	margin: 0px 0px 250px 50px;
+	height: auto;
+	border-radius: 32px;
+}
